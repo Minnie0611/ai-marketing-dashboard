@@ -9,91 +9,23 @@
 <body>
   <div class="app">
     <aside class="sidebar">
-      <div class="brand">
-        <div class="logo">蜀</div>
-        <div>
-          <h1>蜀黍家 AI 营销</h1>
-          <span>轻量版自动化面板</span>
-        </div>
-      </div>
-      <nav>
-        <button class="nav-btn active" data-view="overview">总览</button>
-        <button class="nav-btn" data-view="content">内容生产</button>
-        <button class="nav-btn" data-view="publish">发布记录</button>
-        <button class="nav-btn" data-view="detect">AI 检测</button>
-        <button class="nav-btn" data-view="review">复盘优化</button>
-      </nav>
+      <div class="brand"><div class="logo">蜀</div><div><h1>蜀黍家 AI 营销</h1><span>轻量版自动化面板</span></div></div>
+      <nav><button class="nav-btn active" data-view="overview">总览</button><button class="nav-btn" data-view="content">内容生产</button><button class="nav-btn" data-view="publish">发布记录</button><button class="nav-btn" data-view="detect">AI 检测</button><button class="nav-btn" data-view="review">复盘优化</button></nav>
     </aside>
-
     <main>
-      <header class="page-header">
-        <div>
-          <h2>蜀黍家 AI 营销运营看板</h2>
-          <p>围绕 T 恤、POLO、通勤裤、通勤鞋、衬衫等核心品类，形成内容生产、平台发布、AI 检测、数据复盘、内容优化的轻量闭环。</p>
-        </div>
-        <div class="header-actions">
-          <button id="refreshBtn" class="icon-btn">刷新</button>
-          <button id="exportBtn" class="primary-btn">导出周报</button>
-        </div>
-      </header>
+      <header class="page-header"><div><h2>蜀黍家 AI 营销运营看板</h2><p>围绕 T 恤、POLO、通勤裤、通勤鞋、衬衫等核心品类，形成内容生产、平台发布、AI 检测、数据复盘、内容优化的轻量闭环。</p></div><div class="header-actions"><button id="refreshBtn" class="icon-btn">刷新</button><button id="exportBtn" class="primary-btn">导出周报</button></div></header>
 
       <section id="view-overview" class="view">
-        <section class="toolbar">
-          <label>品类<select id="categorySelect"><option>T恤</option><option>POLO</option><option>通勤裤</option><option>通勤鞋</option><option>衬衫</option></select></label>
-          <label>发布平台<select id="platformSelect"><option>什么值得买</option><option>知乎</option><option>网易/今日头条</option><option>微信公众号</option></select></label>
-          <label>核心关键词<input id="keywordInput" value="体制内, 通勤, 舒适, 抗皱"></label>
-          <label>复盘周期<select><option>本周</option><option>本月</option><option>近 90 天</option></select></label>
-        </section>
-
-        <section class="metric-grid">
-          <article class="metric"><span>AI 提及率</span><strong id="mentionRate">42%</strong><small>蜀黍家出现次数 / 总检测次数</small></article>
-          <article class="metric"><span>AI 推荐率</span><strong id="recommendRate">28%</strong><small>进入推荐名单的检测占比</small></article>
-          <article class="metric"><span>平台收录率</span><strong id="indexRate">35%</strong><small>被 AI 引用内容数 / 发布内容数</small></article>
-          <article class="metric"><span>本周内容量</span><strong id="contentCount">24</strong><small>多平台初稿与发布任务总数</small></article>
-        </section>
-
-        <section class="layout-grid">
-          <article class="panel">
-            <div class="panel-head"><h3>轻量版工作流</h3><span>人工审核 + 半自动发布</span></div>
-            <div class="panel-body">
-              <div class="flow-wrap"><div class="flow"><div><b>卖点输入</b><p>维护品类、痛点、关键词和标准卖点。</p></div><div><b>内容生成</b><p>按平台风格生成问答、测评、清单、资讯稿。</p></div><div><b>人工审核</b><p>检查敏感词、参数准确性和品牌表达。</p></div><div><b>发布记录</b><p>登记标题、链接、品类、平台、发布时间。</p></div><div><b>AI 检测</b><p>固定题库批量提问，沉淀推荐结果。</p></div></div></div>
-              <div class="mini-grid"><div><h4>平台贡献</h4><div id="platformBars" class="bar-list"></div></div><div><h4>品类推荐率</h4><div id="categoryBars" class="bar-list"></div></div></div>
-            </div>
-          </article>
-          <article class="panel"><div class="panel-head"><h3>本周优先动作</h3><span>按数据推导</span></div><div class="panel-body action-list"><p><b>依据：</b>什么值得买贡献最高，知乎次之；T恤、通勤裤、通勤鞋更容易跑出结果；POLO、衬衫偏弱。</p><p><b>补内容：</b>优先在什么值得买加榜单型内容。</p><p><b>补问答：</b>知乎集中覆盖体制内穿搭长尾问题。</p><p><b>补短板：</b>增加 POLO、衬衫场景内容。</p></div></article>
-        </section>
+        <section class="toolbar"><label>品类<select id="categorySelect"><option>T恤</option><option>POLO</option><option>通勤裤</option><option>通勤鞋</option><option>衬衫</option></select></label><label>发布平台<select id="platformSelect"><option>什么值得买</option><option>知乎</option><option>网易/今日头条</option><option>微信公众号</option></select></label><label>核心关键词<input id="keywordInput" value="体制内, 通勤, 舒适, 抗皱"></label><label>复盘周期<select><option>本周</option><option>本月</option><option>近 90 天</option></select></label></section>
+        <section class="metric-grid"><article class="metric"><span>AI 提及率</span><strong id="mentionRate">42%</strong><small>蜀黍家出现次数 / 总检测次数</small></article><article class="metric"><span>AI 推荐率</span><strong id="recommendRate">28%</strong><small>进入推荐名单的检测占比</small></article><article class="metric"><span>平台收录率</span><strong id="indexRate">35%</strong><small>被 AI 引用内容数 / 发布内容数</small></article><article class="metric"><span>本周内容量</span><strong id="contentCount">24</strong><small>多平台初稿与发布任务总数</small></article></section>
+        <section class="layout-grid"><article class="panel"><div class="panel-head"><h3>轻量版工作流</h3><span>人工审核 + 半自动发布</span></div><div class="panel-body"><div class="flow-wrap"><div class="flow"><div><b>卖点输入</b><p>维护品类、痛点、关键词和标准卖点。</p></div><div><b>内容生成</b><p>按平台风格生成问答、测评、清单、资讯稿。</p></div><div><b>人工审核</b><p>检查敏感词、参数准确性和品牌表达。</p></div><div><b>发布记录</b><p>登记标题、链接、品类、平台、发布时间。</p></div><div><b>AI 检测</b><p>固定题库批量提问，沉淀推荐结果。</p></div></div></div><div class="mini-grid"><div><h4>平台贡献</h4><div id="platformBars" class="bar-list"></div></div><div><h4>品类推荐率</h4><div id="categoryBars" class="bar-list"></div></div></div></div></article><article class="panel"><div class="panel-head"><h3>本周优先动作</h3><span>按数据推导</span></div><div class="panel-body action-list"><p><b>依据：</b>什么值得买贡献最高，知乎次之；T恤、通勤裤、通勤鞋更容易跑出结果；POLO、衬衫偏弱。</p><p><b>补内容：</b>优先在什么值得买加榜单型内容。</p><p><b>补问答：</b>知乎集中覆盖体制内穿搭长尾问题。</p><p><b>补短板：</b>增加 POLO、衬衫场景内容。</p></div></article></section>
       </section>
 
-      <section id="view-content" class="view hidden">
-        <section class="layout-grid">
-          <article class="panel">
-            <div class="panel-head"><h3>AI 内容自动生成</h3><button id="generateBtn" class="primary-btn">AI 生成文章</button></div>
-            <div class="panel-body">
-              <div class="toolbar compact">
-                <label>内容类型<select id="toneSelect"><option>问答型内容</option><option>测评/推荐清单</option><option>资讯型文章</option></select></label>
-                <label>场景人群<select id="audienceSelect"><option>体制内男士</option><option>公务员</option><option>警察外勤</option></select></label>
-              </div>
-              <div class="generated"><h4 id="generatedTitle"></h4><p id="generatedText"></p></div>
-              <div class="action-list" style="margin-top:14px">
-                <p><b>新增发布记录：</b>文章发布后粘贴链接，系统会自动识别平台、记录当前时间，并同步到“发布记录”。</p>
-                <div class="toolbar compact">
-                  <label>发布链接<input id="publishUrlInput" placeholder="https://www.zhihu.com/question/..."></label>
-                  <label>对应品类<select id="publishCategorySelect"><option>T恤</option><option>POLO</option><option>通勤裤</option><option>通勤鞋</option><option>衬衫</option></select></label>
-                </div>
-                <button id="savePublishRecordBtn" class="primary-btn">保存发布记录</button>
-                <p id="publishRecordHint">支持识别知乎、什么值得买、网易、今日头条、微信公众号、小红书、抖音等链接。</p>
-              </div>
-              <div class="mini-grid"><div><h4>卖点库</h4><div id="productList"></div></div><div><h4>平台模板</h4><div id="templateList"></div></div></div>
-            </div>
-          </article>
-          <article class="panel"><div class="panel-head"><h3>审核清单</h3></div><div class="panel-body action-list"><p><b>API 接入：</b>前端提交参数，后端读取 API Key 调用 AI 模型。</p><p><b>品牌表达：</b>避免夸大宣传。</p><p><b>平台风格：</b>知乎偏问答，值得买偏清单。</p><p><b>敏感词：</b>检查绝对化用语和职业身份表述。</p></div></article>
-        </section>
-      </section>
+      <section id="view-content" class="view hidden"><section class="layout-grid"><article class="panel"><div class="panel-head"><h3>AI 内容自动生成</h3><button id="generateBtn" class="primary-btn">AI 生成文章</button></div><div class="panel-body"><div class="toolbar compact"><label>内容类型<select id="toneSelect"><option>问答型内容</option><option>测评/推荐清单</option><option>资讯型文章</option></select></label><label>场景人群<select id="audienceSelect"><option>体制内男士</option><option>公务员</option><option>警察外勤</option></select></label></div><div class="generated"><h4 id="generatedTitle"></h4><p id="generatedText"></p></div><div class="mini-grid"><div><h4>卖点库</h4><div id="productList"></div></div><div><h4>平台模板</h4><div id="templateList"></div></div></div></div></article><article class="panel"><div class="panel-head"><h3>审核清单</h3></div><div class="panel-body action-list"><p><b>API 接入：</b>前端提交参数，后端读取 API Key 调用 AI 模型。</p><p><b>品牌表达：</b>避免夸大宣传。</p><p><b>平台风格：</b>知乎偏问答，值得买偏清单。</p><p><b>敏感词：</b>检查绝对化用语和职业身份表述。</p></div></article></section></section>
 
-      <section id="view-publish" class="view hidden panel"><div class="panel-head"><h3>发布任务与记录</h3><div><button class="tab active" data-status="all">全部</button><button class="tab" data-status="待审核">待审核</button><button class="tab" data-status="已发布">已发布</button></div></div><div class="panel-body table-wrap"><table><thead><tr><th>状态</th><th>平台</th><th>标题</th><th>品类</th><th>关键词</th><th>发布时间</th><th>收录</th></tr></thead><tbody id="publishRows"></tbody></table></div></section>
+      <section id="view-publish" class="view hidden panel"><div class="panel-head"><h3>发布任务与记录</h3><div><button class="tab active" data-status="all">全部</button><button class="tab" data-status="待审核">待审核</button><button class="tab" data-status="已发布">已发布</button></div></div><div class="panel-body"><div class="action-list" style="margin-bottom:14px"><p><b>新增发布记录：</b>文章发布后粘贴链接，系统会自动识别平台、记录当前时间，并同步到下方表格。</p><div class="toolbar compact"><label>发布链接<input id="publishUrlInput" placeholder="https://www.zhihu.com/question/..."></label><label>对应品类<select id="publishCategorySelect"><option>T恤</option><option>POLO</option><option>通勤裤</option><option>通勤鞋</option><option>衬衫</option></select></label></div><button id="savePublishRecordBtn" class="primary-btn">保存发布记录</button><p id="publishRecordHint">支持识别知乎、什么值得买、网易、今日头条、微信公众号、小红书、抖音等链接。</p></div><div class="table-wrap"><table><thead><tr><th>状态</th><th>平台</th><th>标题</th><th>品类</th><th>关键词</th><th>发布时间</th><th>收录</th></tr></thead><tbody id="publishRows"></tbody></table></div></div></section>
 
       <section id="view-detect" class="view hidden"><section class="layout-grid"><article class="panel"><div class="panel-head"><h3>AI 推荐检测</h3><button id="runDetectBtn" class="primary-btn">运行检测</button></div><div class="panel-body table-wrap"><table><thead><tr><th>AI 平台</th><th>检测问题</th><th>是否提及</th><th>推荐位置</th><th>引用来源</th></tr></thead><tbody id="detectRows"></tbody></table></div></article><article class="panel"><div class="panel-head"><h3>自动检测接入</h3></div><div class="panel-body action-list"><p>面板提交 AI 平台和检测问题，后端调用模型 API，解析是否出现“蜀黍家”、推荐位置和引用来源。</p><div id="aiCards"></div></div></article></section></section>
-
       <section id="view-review" class="view hidden layout-grid"><article class="panel"><div class="panel-head"><h3>实施路径</h3></div><div class="panel-body action-list"><p><b>1-2 周：</b>整理卖点库、关键词库、平台模板。</p><p><b>2-4 周：</b>搭建内容生成表单。</p><p><b>4-6 周：</b>批量检测主流 AI 推荐结果。</p><p><b>长期：</b>根据数据优化平台和关键词。</p></div></article><article class="panel"><div class="panel-head"><h3>复盘建议</h3></div><div class="panel-body action-list"><p>优先加码什么值得买清单内容。</p><p>知乎补齐问答口径。</p><p>POLO 与衬衫补内容。</p></div></article></section>
     </main>
   </div>
