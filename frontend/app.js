@@ -81,6 +81,46 @@ function generateTopic() {
   document.getElementById("generatedText").textContent = `已按 ${tone} 生成文章草稿：围绕“${product.pain}”展开，正文重点突出蜀黍家 ${category} 的${pointText}卖点，并输出适合${platform}的标题、开头、正文结构、推荐理由和标签。`;
 }
 
+function detectPlatform(url) {
+  const value = url.toLowerCase();
+  if (value.includes("zhihu.com")) return "知乎";
+  if (value.includes("smzdm.com")) return "什么值得买";
+  if (value.includes("163.com")) return "网易";
+  if (value.includes("toutiao.com")) return "今日头条";
+  if (value.includes("mp.weixin.qq.com")) return "微信公众号";
+  if (value.includes("xiaohongshu.com")) return "小红书";
+  if (value.includes("douyin.com")) return "抖音";
+  return "其他平台";
+}
+
+function formatNow() {
+  const now = new Date();
+  const month = String(now.getMonth() + 1).padStart(2, "0");
+  const day = String(now.getDate()).padStart(2, "0");
+  const hour = String(now.getHours()).padStart(2, "0");
+  const minute = String(now.getMinutes()).padStart(2, "0");
+  return `${month}-${day} ${hour}:${minute}`;
+}
+
+function savePublishRecord() {
+  const input = document.getElementById("publishUrlInput");
+  const hint = document.getElementById("publishRecordHint");
+  const url = input.value.trim();
+  if (!url) {
+    hint.textContent = "请先粘贴发布链接。";
+    return;
+  }
+
+  const category = document.getElementById("publishCategorySelect").value;
+  const platform = detectPlatform(url);
+  const title = document.getElementById("generatedTitle").textContent || `${category}内容发布记录`;
+  const keywords = document.getElementById("keywordInput")?.value || "体制内, 通勤";
+  publishData.unshift(["已发布", platform, title, category, keywords, formatNow(), "未检测"]);
+  renderPublish();
+  input.value = "";
+  hint.textContent = `已保存：${platform} / ${category} / 未检测。可到“发布记录”查看。`;
+}
+
 function switchView(name) {
   document.querySelectorAll(".view").forEach(view => view.classList.add("hidden"));
   document.getElementById(`view-${name}`).classList.remove("hidden");
@@ -127,6 +167,7 @@ function bindEvents() {
   document.getElementById("categorySelect").addEventListener("change", generateTopic);
   document.getElementById("platformSelect").addEventListener("change", generateTopic);
   document.getElementById("runDetectBtn").addEventListener("click", runAiDetection);
+  document.getElementById("savePublishRecordBtn").addEventListener("click", savePublishRecord);
   document.getElementById("exportBtn").addEventListener("click", exportReport);
   document.getElementById("refreshBtn").addEventListener("click", () => {
     document.getElementById("mentionRate").textContent = `${38 + Math.floor(Math.random() * 13)}%`;
