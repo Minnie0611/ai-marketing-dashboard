@@ -1,0 +1,12 @@
+[
+  {
+    "category": "T恤",
+    "sellingPoints": ["凉感", "防晒", "透气", "抗皱"],
+    "painPoint": "夏天热、出汗、穿着不体面"
+  },
+  {
+    "category": "通勤裤",
+    "sellingPoints": ["垂顺", "抗皱", "舒适", "有型"],
+    "painPoint": "久坐不舒服、裤子皱、显臃肿"
+  }
+]
