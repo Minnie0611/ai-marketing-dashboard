@@ -1,0 +1,17 @@
+{
+  "name": "ai-marketing-dashboard",
+  "version": "0.2.0",
+  "description": "Lightweight AI marketing dashboard with mock backend APIs.",
+  "main": "backend/server.js",
+  "scripts": {
+    "start": "node backend/server.js",
+    "dev": "node backend/server.js"
+  },
+  "keywords": [
+    "ai-marketing",
+    "dashboard",
+    "automation"
+  ],
+  "author": "Minnie0611",
+  "license": "MIT"
+}
